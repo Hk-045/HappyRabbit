@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happyrabbit | Every Bunny Loves To Learn</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Fredoka', sans-serif; scroll-behavior: smooth; }
+        .brand-yellow { background-color: #FFD93D; }
+        .text-purple-brand { color: #6C63FF; }
+        .bg-purple-brand { background-color: #6C63FF; }
+        
+        /* Smooth Gradient Path */
+        .rainbow-gradient {
+            background: linear-gradient(90deg, #FFADAD, #FFD6A5, #FDFFB6, #CAFFBF, #9BF6FF, #A0C4FF, #BDB2FF);
+        }
+
+        /* Floating Animation */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        .animate-float { animation: float 4s ease-in-out infinite; }
+
+        /* Glassmorphism */
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .card-shadow:hover {
+            box-shadow: 0 20px 40px -10px rgba(108, 99, 255, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 overflow-x-hidden">
+
+    <nav class="fixed w-full z-50 glass py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="logo.jpeg" alt="Logo" class="h-12 w-12 rounded-full border-2 border-yellow-400">
+                <span class="text-2xl font-bold text-purple-700">Happyrabbit</span>
+            </div>
+            <div class="hidden lg:flex gap-8 font-semibold text-slate-600">
+                <a href="#kids" class="hover:text-purple-600 transition">For Kids</a>
+                <a href="#parents" class="hover:text-purple-600 transition">For Parents</a>
+                <a href="#schools" class="hover:text-purple-600 transition">For Schools</a>
+                <a href="#about" class="hover:text-purple-600 transition">Why Us</a>
+            </div>
+            <button onclick="launchJoy()" class="bg-purple-600 text-white px-6 py-2 rounded-full font-bold shadow-lg hover:bg-purple-700 transition">Register</button>
+        </div>
+    </nav>
+
+    <header class="min-h-screen brand-yellow relative flex items-center pt-20 overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-20 left-10 text-8xl animate-float">☁️</div>
+            <div class="absolute bottom-20 right-10 text-8xl animate-float" style="animation-delay: 2s;">⭐</div>
+        </div>
+
+        <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10">
+            <div data-aos="fade-right" data-aos-duration="1000">
+                <h1 class="text-6xl lg:text-8xl font-bold text-purple-900 leading-[1.1] mb-6">
+                    Where Learning Feels Like <span class="text-white drop-shadow-md">Joy</span>
+                </h1>
+                <p class="text-2xl text-purple-900/80 mb-10 max-w-lg">
+                    Engaging programs for children, expert-led workshops for parents, and meaningful partnerships for schools.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button onclick="launchJoy()" class="bg-pink-500 text-white px-10 py-5 rounded-2xl text-xl font-bold shadow-2xl hover:bg-pink-600 transition transform hover:-translate-y-1">
+                        👉 Start Your Journey
+                    </button>
+                </div>
+            </div>
+            <div class="relative" data-aos="zoom-in" data-aos-duration="1200">
+                <img src="WhatsApp Image 2026-04-03 at 12.55.50 PM.jpeg" alt="Hero Mural" class="rounded-[60px] shadow-2xl border-[12px] border-white w-full animate-float">
+                <div class="absolute -bottom-6 -right-6 glass p-6 rounded-3xl shadow-xl">
+                    <p class="text-pink-500 font-bold text-lg">Every Bunny Loves To Learn! 🐰</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-0 w-full h-8 rainbow-gradient"></div>
+    </header>
+
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl lg:text-6xl font-bold text-center mb-20" data-aos="fade-up">
+                Not Just Classes. <span class="text-purple-600 italic">An Experience.</span>
+            </h2>
+            <div class="grid grid-cols-2 lg:grid-cols-5 gap-8">
+                <div class="text-center group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-24 h-24 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition">
+                        <span class="text-4xl">✨</span>
+                    </div>
+                    <p class="font-bold text-xl">Confidence</p>
+                </div>
+                <div class="text-center group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-24 h-24 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition text-4xl">🎨</div>
+                    <p class="font-bold text-xl">Creativity</p>
+                </div>
+                <div class="text-center group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition text-4xl">🎤</div>
+                    <p class="font-bold text-xl text-center leading-tight">Communication</p>
+                </div>
+                <div class="text-center group" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition text-4xl">🔍</div>
+                    <p class="font-bold text-xl">Curiosity</p>
+                </div>
+                <div class="text-center group" data-aos="fade-up" data-aos-delay="500">
+                    <div class="w-24 h-24 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition text-4xl">🌱</div>
+                    <p class="font-bold text-xl text-center leading-tight">Emotional Growth</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kids" class="py-24 bg-slate-50 relative">
+        <div class="container mx-auto px-6">
+            <div class="mb-16">
+                <h2 class="text-5xl font-bold mb-4" data-aos="fade-right">🚀 Programs That Kids Love</h2>
+                <p class="text-xl text-slate-500" data-aos="fade-right" data-aos-delay="100">Learning that feels like play, growth that feels natural</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div class="bg-white p-10 rounded-[50px] shadow-sm border-t-8 border-yellow-400" data-aos="fade-up">
+                    <h3 class="text-3xl font-bold mb-8 text-yellow-600">After-School & Skill Programs</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8">
+                        <div class="flex items-center gap-3 font-medium text-lg">✍️ Handwriting Improvement</div>
+                        <div class="flex items-center gap-3 font-medium text-lg">🧠 Olympiad Classes</div>
+                        <div class="flex items-center gap-3 font-medium text-lg">🐝 Spell Bee Prep</div>
+                        <div class="flex items-center gap-3 font-medium text-lg">🎨 Advanced Painting</div>
+                        <div class="flex items-center gap-3 font-medium text-lg">🎭 Art & Craft DIY</div>
+                        <div class="flex items-center gap-3 font-medium text-lg">🎤 Public Speaking</div>
+                        <div class="flex items-center gap-3 font-medium text-lg">🥋 Karate & Taekwondo</div>
+                        <div class="flex items-center gap-3 font-medium text-lg">🔬 Science & Innovation</div>
+                        <div class="flex items-center gap-3 font-medium text-lg">♟️ Chess</div>
+                        <div class="flex items-center gap-3 font-medium text-lg">📚 Storytelling</div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-10 rounded-[50px] shadow-sm border-t-8 border-purple-500" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-3xl font-bold mb-8 text-purple-600">Advanced & Future Skills</h3>
+                    <div class="space-y-6">
+                        <div class="p-6 bg-purple-50 rounded-3xl flex gap-6 items-center">
+                            <span class="text-4xl">💡</span>
+                            <div>
+                                <h4 class="font-bold text-xl">Entrepreneur Skills for Kids</h4>
+                                <p class="text-slate-500">Empowering future leaders with big ideas.</p>
+                            </div>
+                        </div>
+                        <div class="p-6 bg-blue-50 rounded-3xl flex gap-6 items-center">
+                            <span class="text-4xl">📊</span>
+                            <div>
+                                <h4 class="font-bold text-xl">School Project Support (Gr 6+)</h4>
+                                <p class="text-slate-500">Expert guidance for academic excellence.</p>
+                            </div>
+                        </div>
+                        <div class="p-6 bg-pink-50 rounded-3xl flex gap-6 items-center">
+                            <span class="text-4xl">🎓</span>
+                            <div>
+                                <h4 class="font-bold text-xl">Higher Prep – SAT</h4>
+                                <p class="text-slate-500">Readying students for global opportunities.</p>
+                            </div>
+                        </div>
+                        <div class="p-6 bg-green-50 rounded-3xl flex gap-6 items-center">
+                            <span class="text-4xl">🧠</span>
+                            <div>
+                                <h4 class="font-bold text-xl text-center leading-tight">Psychometric Assessment & Counselling</h4>
+                                <p class="text-slate-500">Understanding your child's unique path.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <button onclick="launchJoy()" class="bg-purple-600 text-white px-12 py-5 rounded-full font-bold text-xl shadow-xl hover:bg-purple-700 transition">Explore All Programs</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="parents" class="py-24 bg-white overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+                <div class="lg:w-1/2" data-aos="fade-right">
+                    <h2 class="text-5xl font-bold mb-6 text-pink-500">💛 Supporting Parents, Every Step of the Way</h2>
+                    <p class="text-2xl text-slate-600 italic mb-10">"Because parenting doesn’t come with a manual—but support makes all the difference."</p>
+                    
+                    <div class="grid sm:grid-cols-2 gap-8 mb-10">
+                        <div>
+                            <h4 class="font-bold text-xl mb-4 underline decoration-yellow-400 decoration-4">🎤 Expert Workshops</h4>
+                            <ul class="space-y-2 text-slate-600">
+                                <li>• Bullying & School Talk</li>
+                                <li>• Managing Screen Time</li>
+                                <li>• Anxiety & Focus</li>
+                                <li>• Social Connections</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-xl mb-4 underline decoration-purple-400 decoration-4">🌿 Parent Experience</h4>
+                            <ul class="space-y-2 text-slate-600">
+                                <li>• Community Activities</li>
+                                <li>• Art & Movement</li>
+                                <li>• Dance Therapy & Yoga</li>
+                                <li>• Mom Space Circles</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bg-pink-50 p-8 rounded-[40px] border-2 border-pink-200 mb-10">
+                        <h4 class="text-2xl font-bold text-pink-600 mb-2">🌟 HerAmbition Program</h4>
+                        <p class="text-slate-700">Empowering mothers to rediscover their identity, goals, and growth.</p>
+                    </div>
+
+                    <a href="https://wa.me/919123346773" class="inline-block bg-green-500 text-white px-8 py-4 rounded-2xl font-bold shadow-lg hover:bg-green-600 transition">Join the Community</a>
+                </div>
+                <div class="lg:w-1/2" data-aos="fade-left">
+                    <img src="2.jpeg" alt="Parent Garden" class="rounded-[80px] shadow-2xl border-[15px] border-slate-50 rotate-2">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="schools" class="py-24 bg-purple-900 text-white">
+        <div class="container mx-auto px-6 flex flex-col lg:flex-row gap-16 items-center">
+            <div class="lg:w-1/2" data-aos="fade-up">
+                <h2 class="text-5xl font-bold mb-8">🤝 Partnering with Schools That Care</h2>
+                <div class="space-y-6">
+                    <div class="flex gap-4 items-start">
+                        <div class="w-8 h-8 bg-yellow-400 rounded-full flex-shrink-0 mt-1"></div>
+                        <p class="text-xl"><b>Lesson Planning Support:</b> Modern, engaging curriculum help.</p>
+                    </div>
+                    <div class="flex gap-4 items-start">
+                        <div class="w-8 h-8 bg-pink-400 rounded-full flex-shrink-0 mt-1"></div>
+                        <p class="text-xl"><b>Teacher Training:</b> Elevating classroom experiences.</p>
+                    </div>
+                    <div class="flex gap-4 items-start">
+                        <div class="w-8 h-8 bg-blue-400 rounded-full flex-shrink-0 mt-1"></div>
+                        <p class="text-xl"><b>Project-Based Learning:</b> Guiding real-world growth.</p>
+                    </div>
+                    <div class="flex gap-4 items-start">
+                        <div class="w-8 h-8 bg-green-400 rounded-full flex-shrink-0 mt-1"></div>
+                        <p class="text-xl"><b>Hiring & Growth Advisory:</b> Strengthening the foundation.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:w-1/2 bg-white/10 p-12 rounded-[60px] backdrop-blur-md" data-aos="zoom-in">
+                <h4 class="text-3xl font-bold mb-6 text-yellow-400">The Outcome:</h4>
+                <ul class="text-2xl space-y-4">
+                    <li>✅ Better Student Engagement</li>
+                    <li>✅ Stronger Learning Roots</li>
+                    <li>✅ High Student Confidence</li>
+                </ul>
+                <button onclick="launchJoy()" class="mt-10 bg-white text-purple-900 px-10 py-4 rounded-full font-bold text-xl hover:bg-yellow-400 transition">Partner With Us</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 brand-yellow relative overflow-hidden">
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <h2 class="text-5xl font-bold mb-16 text-purple-900">What Makes Us Different</h2>
+            <div class="flex flex-wrap justify-center gap-6 mb-24">
+                <span class="bg-white px-6 py-3 rounded-full font-bold text-purple-700 shadow-md">✨ Expert-curated Programs</span>
+                <span class="bg-white px-6 py-3 rounded-full font-bold text-purple-700 shadow-md">✨ Small Group Attention</span>
+                <span class="bg-white px-6 py-3 rounded-full font-bold text-purple-700 shadow-md">✨ Real-Life Skills</span>
+                <span class="bg-white px-6 py-3 rounded-full font-bold text-purple-700 shadow-md">✨ Safe & Joyful Environment</span>
+            </div>
+
+            <h2 class="text-5xl font-bold mb-12 text-purple-900">What Families Feel</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-10 rounded-[40px] shadow-xl transform hover:-rotate-1 transition" data-aos="fade-up">
+                    <p class="text-xl italic mb-6 text-slate-600">"My child looks forward to every single session with a huge smile."</p>
+                    <p class="font-bold text-pink-500">- Happy Parent</p>
+                </div>
+                <div class="bg-white p-10 rounded-[40px] shadow-xl transform hover:rotate-1 transition" data-aos="fade-up" data-aos-delay="200">
+                    <p class="text-xl italic mb-6 text-slate-600">"The confidence boost we've seen in just 3 months is incredible."</p>
+                    <p class="font-bold text-pink-500">- Grade 4 Parent</p>
+                </div>
+                <div class="bg-white p-10 rounded-[40px] shadow-xl transform hover:-rotate-1 transition" data-aos="fade-up" data-aos-delay="400">
+                    <p class="text-xl italic mb-6 text-slate-600">"It feels like a second home for my kids. Safe and creative."</p>
+                    <p class="font-bold text-pink-500">- School Partner</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center bg-slate-50 p-12 rounded-[60px] shadow-inner gap-12">
+            <div>
+                <h3 class="text-4xl font-bold mb-2">🐰 Happyrabbit Centre</h3>
+                <p class="text-slate-500 text-xl">Where big dreams start small.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-12">
+                <div>
+                    <h4 class="font-bold text-purple-600 text-2xl mb-4">🕒 Weekdays</h4>
+                    <p class="text-xl">Mon to Fri: 10 AM – 7 PM</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-pink-500 text-2xl mb-4">🎉 Weekends</h4>
+                    <p class="text-xl text-center leading-tight">Sat & Sun (Events): 11 AM – 5 PM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 bg-slate-900 text-white text-center">
+        <div class="container mx-auto px-6" data-aos="zoom-in">
+            <h2 class="text-6xl font-bold mb-6">Give Your Child More Than Just Classes</h2>
+            <p class="text-2xl opacity-70 mb-12 max-w-2xl mx-auto">Join a space where children grow, parents feel supported, and learning feels joyful.</p>
+            <div class="flex flex-wrap justify-center gap-6">
+                <button onclick="launchJoy()" class="bg-pink-500 px-12 py-5 rounded-2xl font-bold text-2xl shadow-xl hover:bg-pink-600 transition transform hover:scale-105">Register Now</button>
+                <a href="https://wa.me/919123346773" class="bg-green-500 px-12 py-5 rounded-2xl font-bold text-2xl shadow-xl hover:bg-green-600 transition transform hover:scale-105">Join Community</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-16 bg-white border-t border-slate-100">
+        <div class="container mx-auto px-6 flex flex-col lg:flex-row justify-between items-center gap-12">
+            <div class="flex flex-col items-center lg:items-start">
+                <div class="flex items-center gap-3 mb-4">
+                    <img src="logo.jpeg" class="h-10 w-10 rounded-full">
+                    <span class="text-2xl font-bold text-purple-700">Happyrabbit</span>
+                </div>
+                <p class="text-slate-400">Every Bunny Loves To Learn.</p>
+            </div>
+            
+            <div class="flex gap-8">
+                <a href="https://www.instagram.com/happy_rabbit_blr?igsh=ODI5N3FrdWt1ZGo5&utm_source=qr" class="text-pink-500 font-bold text-xl hover:underline">Instagram</a>
+                <a href="https://wa.me/919123346773" class="text-green-600 font-bold text-xl hover:underline">WhatsApp Community</a>
+            </div>
+
+            <div class="text-center lg:text-right text-slate-500">
+                <p class="font-bold text-slate-800">📧 contact@happyrabbit.com</p>
+                <p class="font-bold text-slate-800">📞 +91 91233 46773</p>
+                <p class="mt-2">Bengaluru, India</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Start Animations
+        AOS.init({ once: true, offset: 100 });
+
+        // Confetti Burst Effect
+        function launchJoy() {
+            confetti({
+                particleCount: 200,
+                spread: 100,
+                origin: { y: 0.6 },
+                colors: ['#FFD93D', '#6C63FF', '#FF6B6B', '#4ECDC4']
+            });
+            // Optional: Redirect to Form after 1.5 seconds
+            // setTimeout(() => { window.location.href = 'YOUR_GOOGLE_FORM_LINK'; }, 1500);
+        }
+    </script>
+</body>
+</html>
